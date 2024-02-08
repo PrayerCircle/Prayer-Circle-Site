@@ -5,23 +5,46 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Prayer Circle</title>
 		<link rel="stylesheet" href="/dist/output.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
 	</head>
-	<body class="scrollbar-hide">
-		<div class="w-full bg-offblack flex flex-col md:flex-row">
-			<div class="w-full md:w-[50%] min-h-dvh py-[100px] bg-offblack">
-				<div class="w-full flex justify-center items-center bg-purple">
+	<body class="scrollbar-hide bg-offblack">
+		<div class="w-full bg-offblack flex flex-1 flex-col md:flex-row">
+			<div
+				class="w-full md:w-[50%] flex flex-col items-center min-h-dvh py-[100px] bg-offblack text-offwhite"
+			>
+				<div class="w-full flex justify-center items-center">
 					<img
 						class="w-[80%] max-w-[450px]"
 						src="./assets/Squared_Logo_Dark.png"
 						alt=""
 					/>
 				</div>
-				<div class="text-offwhite bg-red justify-center text-center">
-					<h1 class="bg-green">Prayer Circle</h1>
-					<h3>Unite In Faith</h3>
-					<h3>Pray In Community</h3>
-					<a class="" href=""></a>
-					<a href=""></a>
+				<div>
+					<div class="text-center my-2">
+						<h1 class="text-[40px] font-bold py-">Prayer Circle</h1>
+						<h3 class="text-xl">
+							Unite In Faith, Pray In Community
+						</h3>
+					</div>
+					<div class="flex flex-col justify-center text-center my-4">
+						<a
+							class="text-xl text-offwhite hover:text-purple bg-purple hover:bg-offblack border border-offblack hover:border-purple transition-colors duration-300 hover:cursor-pointer py-3 rounded-xl my-4"
+							href="#"
+							>Join the Beta</a
+						>
+					</div>
+				</div>
+				<div
+					class="md:hidden w-full justify-center flex flex-row mt-10 bg-purple"
+				>
+					<img
+						class="w-[75px] aspect-square invert"
+						src="./assets/down-arrow.png"
+						alt=""
+					/>
 				</div>
 			</div>
 			<div
