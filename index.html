@@ -18,21 +18,19 @@
 		<div class="w-full bg-offblack flex flex-1 flex-col lg:flex-row">
 			<!-- Landing Page -->
 			<div
-				class="w-full lg:w-[50%] flex flex-col items-center justify-between min-h-dvh h-dvh pt-[75px] bg-offblack"
+				class="w-full lg:w-[50%] flex flex-col items-center justify-between h-screen pt-[75px] bg-offblack"
 				style="
-						background-image: url('./assets/mckenna-phillips-Db-stA8meJY-unsplash.jpg');						
-						background-position: center;
-						background-repeat: no-repeat;
-						background-size: cover;													
-					"
-				>
+					background-image: url('./assets/mckenna-phillips-Db-stA8meJY-unsplash.jpg');
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;
+				"
+			>
 				<div>
 					<!-- Title -->
 					<div class="flex justify-center">
 						<div class="text-center mb-10">
-							<h1 class="text-[40px] font-bold">
-								Prayer Circle
-							</h1>
+							<h1 class="text-[40px] font-bold">Prayer Circle</h1>
 						</div>
 					</div>
 					<!-- Logo Image -->
@@ -48,23 +46,51 @@
 						<h3 class="text-xl my-10">
 							Unite In Faith, Pray In Community
 						</h3>
-						</div>
-						<!-- Join Button -->
-						<div
-							class="flex flex-col justify-center items-center text-center my-10"							
-							>
-							<a
-								class="py-3 px-10 rounded-xl my-4 text-xl hover:text-yellow bg-yellow hover:bg-offblack border border-offblack hover:border-yellow transition-colors duration-300 hover:cursor-pointer"
-								href="https://testflight.apple.com/join/RKICxFL7"
-								target="_blank"
-								>Join the Beta</a
-							>
-						</div>
 					</div>
-					<a class="flex lg:hidden w-full mt-auto justify-center items-center pb-[40px]" href="#about-us">
-						<ion-icon name="chevron-down-outline" style="font-size: 75px"></ion-icon>
-					</a>
-				</div>			
+					<!-- Join Button -->
+					<div
+						class="flex flex-col justify-center items-center text-center my-10"
+					>
+						<div
+							class="py-3 px-10 rounded-xl my-4 text-xl hover:text-yellow bg-yellow hover:bg-offblack border border-offblack hover:border-yellow transition-colors duration-300 hover:cursor-pointer"
+							id="join-button"
+						>
+							Join the Beta
+						</div>
+						<script>
+							let joinButton =
+								document.getElementById('join-button');
+							joinButton.addEventListener('click', () => {
+								// Get the user agent string
+								const userAgent = navigator.userAgent;
+
+								// Get the operating system
+								const operatingSystem = userAgent.match(
+									/(Windows|Macintosh|Linux|iOS|Android)/i
+								)[0];
+
+								if (
+									operatingSystem === 'Macintosh' ||
+									operatingSystem === 'iOS'
+								)
+									window.location.href =
+										'https://testflight.apple.com/join/RKICxFL7';
+								else {
+									alert('Android beta coming soon.');
+								}
+							});
+						</script>
+					</div>
+				</div>
+				<a
+					class="flex lg:hidden w-full mt-auto justify-center items-center pb-[40px]"
+					href="#about-us"
+				>
+					<ion-icon
+						name="chevron-down-outline"
+						style="font-size: 75px"
+					></ion-icon>
+				</a>
 			</div>
 
 			<!-- About Us -->
