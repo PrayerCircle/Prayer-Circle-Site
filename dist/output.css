@@ -721,6 +721,16 @@ video {
   margin-bottom: 1rem;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -864,12 +874,24 @@ video {
   width: 100%;
 }
 
+.w-\[60\%\] {
+  width: 60%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
 .max-w-\[450px\] {
   max-width: 450px;
 }
 
 .max-w-\[80\%\] {
   max-width: 80%;
+}
+
+.max-w-\[350px\] {
+  max-width: 350px;
 }
 
 .flex-1 {
@@ -1863,9 +1885,17 @@ video {
   background-color: rgb(89 70 178 / var(--tw-bg-opacity));
 }
 
-.bg-red {
+.bg-yellow {
   --tw-bg-opacity: 1;
-  background-color: rgb(204 37 0 / var(--tw-bg-opacity));
+  background-color: rgb(249 168 38 / var(--tw-bg-opacity));
+}
+
+.bg-\[\'\.\/assets\/mckenna-phillips-Db-stA8meJY-unsplash\.jpg\'\] {
+  background-color: './assets/mckenna-phillips-Db-stA8meJY-unsplash.jpg';
+}
+
+.bg-\[\.\/assets\/mckenna-phillips-Db-stA8meJY-unsplash\.jpg\] {
+  background-color: ./assets/mckenna-phillips-Db-stA8meJY-unsplash.jpg;
 }
 
 .decoration-slice {
@@ -2558,6 +2588,11 @@ video {
   border-color: rgb(89 70 178 / var(--tw-border-opacity));
 }
 
+.hover\:border-yellow:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(249 168 38 / var(--tw-border-opacity));
+}
+
 .hover\:bg-offblack:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(18 18 18 / var(--tw-bg-opacity));
@@ -2570,6 +2605,11 @@ video {
 .hover\:text-purple:hover {
   --tw-text-opacity: 1;
   color: rgb(89 70 178 / var(--tw-text-opacity));
+}
+
+.hover\:text-yellow:hover {
+  --tw-text-opacity: 1;
+  color: rgb(249 168 38 / var(--tw-text-opacity));
 }
 
 .before\:hover\:text-center:hover::before {
@@ -2607,6 +2647,10 @@ video {
 
   .lg\:max-w-\[600px\] {
     max-width: 600px;
+  }
+
+  .lg\:max-w-\[500px\] {
+    max-width: 500px;
   }
 
   .lg\:flex-row {
