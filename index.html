@@ -30,13 +30,13 @@
 					<!-- Logo Image -->
 					<div class="w-full flex justify-center">
 						<img
-							class="w-[330px] md:w-[450px] lg:w-[400px] xl:w-[450px]"
+							class="max-w-[70%] w-[330px] md:w-[450px] lg:w-[400px] xl:w-[450px]"
 							src="./assets/Squared_Logo_Dark.png"
 							alt=""
 						/>
 					</div>
 					<!-- Slogan & Button -->
-					<div class="flex flex-col items-center justify-center my-4">
+					<div class="flex flex-col items-center justify-center my-10">
 						<!-- Title -->
 						<h1 class="text-[40px] font-bold">Prayer Circle</h1>
 						<h3 class="text-xl">
@@ -44,9 +44,7 @@
 						</h3>
 					</div>
 					<!-- Join Button -->
-					<div
-						class="flex flex-col justify-center items-center text-center my-10"
-					>
+					<div class="flex flex-col justify-center items-center text-center my-10">
 						<a
 							class="py-3 px-10 rounded-xl my-4 text-xl hover:text-yellow bg-yellow hover:bg-offblack border border-offblack hover:border-yellow transition-colors duration-300 hover:cursor-pointer"
 							id="join-button"
@@ -81,6 +79,14 @@
 							});
 						</script>
 					</div>
+					<div class="flex flex-col justify-center items-center">						
+						<a href="#about-us" class="text-[75px] text-center">
+							<h3 class="text-xl">
+								Learn More
+							</h3>
+							<ion-icon name="chevron-down-outline" ></ion-icon>
+						</a>
+					</div>
 				</div>
 			</div>
 
@@ -89,26 +95,26 @@
 				class="w-full lg:w-[50%] min-h-screen bg-offblack"
 				id="about-us"
 			>
-				<div
-					class="flex flex-col justify-center items-center min-h-screen bg-purple"
-				>
-					<h1 class="text-5xl">About Us</h1>
-					<p class="text-center max-w-[80%] mt-4">
-						Prayer Circle is a community of people who come together
-						to pray for each other. We believe in the power of
-						prayer and the power of community. We are here to
-						support each other and to pray for each other. We are
-						here to support each other and to pray for each other.
-						We are here to support each other and to pray for each
-						other.
-					</p>
+				<div class="w-full lg:w-[50%] min-h-screen bg-offblack" id="about-us">
+					<div class="flex flex-col justify-center items-center min-h-screen bg-purple">
+						<div class="w-full h-auto flex flex-col items-center justify-center text-center py-10">
+							<h1 class="text-5xl">Our Mission</h1>
+							<div class="relative flex items-center justify-center">
+								<img class="max-w-[70%] z-0" src="./assets/Apple_iPhone_X_Silver.png" alt="" />
+								<img class="absolute w-36 top-[110px]" src="./assets/Squared_Logo_Dark.png" alt="" />
+								<div class="absolute top-[300px] text-[22px] text-center max-w-[50%] flex flex-col gap-y-10">
+									<h1>Foster Christian Community</h1>
+									<h1>Provide Private Space for Spiritual Growth</h1>
+									<h1>On iOS and Android</h1>
+								</div>								
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- Meet the Team -->
-		<div
-			class="flex flex-col justify-center items-center min-h-screen bg-green"
-		>
+		<div class="flex flex-col justify-center items-center min-h-screen bg-green">
 			<h1 class="text-5xl">Meet the Team</h1>
 			<p class="text-center max-w-[80%] mt-4">
 				Prayer Circle is a community of people who come together to pray
@@ -120,9 +126,7 @@
 			</p>
 		</div>
 		<!-- Subscribe -->
-		<div
-			class="flex flex-col justify-center items-center min-h-screen bg-yellow"
-		>
+		<div class="flex flex-col justify-center items-center min-h-screen bg-yellow">
 			<h1 class="text-5xl">Subscribe</h1>
 			<p class="text-center max-w-[80%] mt-4">
 				Prayer Circle is a community of people who come together to pray
