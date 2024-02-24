@@ -13,33 +13,6 @@
 			nomodule
 			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
 		></script>
-		<script>
-			let joinButton =
-				document.getElementById('join-button');
-
-			let href = '';
-
-			const userAgent = navigator.userAgent;
-			const operatingSystem = userAgent.match(
-				/(Windows|Macintosh|Linux|iOS|Android)/i
-			)[0];
-
-			if (
-				operatingSystem === 'Macintosh' ||
-				operatingSystem === 'iOS'
-			)
-				href =
-					'https://testflight.apple.com/join/RKICxFL7';
-			else {
-				href = '#';
-			}
-
-			joinButton.href = href;
-
-			joinButton.addEventListener('click', () => {
-				alert(operatingSystem);
-			});
-		</script>
 	</head>
 	<body class="scrollbar-hide bg-offblack text-offwhite">
 		<div class="w-full bg-offblack flex flex-1 flex-col lg:flex-row">
@@ -63,7 +36,9 @@
 						/>
 					</div>
 					<!-- Slogan & Button -->
-					<div class="flex flex-col items-center justify-center my-10">
+					<div
+						class="flex flex-col items-center justify-center my-10"
+					>
 						<!-- Title -->
 						<h1 class="text-[40px] font-bold">Prayer Circle</h1>
 						<h3 class="text-xl">
@@ -71,92 +46,152 @@
 						</h3>
 					</div>
 					<!-- Join Button -->
-					<div class="flex flex-col justify-center items-center text-center my-10">
-						<a class="py-3 px-10 rounded-xl my-4 text-xl hover:text-yellow bg-yellow hover:bg-offblack hover:border hover:border-yellow transition-colors duration-300 hover:cursor-pointer" id="join-button">
+					<div
+						class="flex flex-col justify-center items-center text-center my-10"
+					>
+						<div
+							class="py-3 px-10 rounded-xl my-4 text-xl hover:text-yellow bg-yellow hover:bg-offblack border border-offblack hover:border-yellow transition-colors duration-300 hover:cursor-pointer"
+							id="join-button"
+						>
 							Join the Beta
-						</a>
-					</div>
-					<div class="flex flex-col justify-center items-center">						
-						<a href="#about-us" class="text-[75px] text-center">
-							<h3 class="text-xl">
-								Learn More
-							</h3>
-							<ion-icon name="chevron-down-outline" ></ion-icon>
-						</a>
+						</div>
+						<script>
+							let joinButton =
+								document.getElementById('join-button');
+
+							let href = '';
+
+							const userAgent = navigator.userAgent;
+							const operatingSystem = userAgent.match(
+								/(Windows|Macintosh|Linux|iOS|Android)/i
+							)[0];
+
+							if (
+								operatingSystem === 'Macintosh' ||
+								operatingSystem === 'iOS'
+							)
+								href =
+									'https://testflight.apple.com/join/RKICxFL7';
+							else {
+								href = '#';
+							}
+
+							joinButton.href = href;
+
+							joinButton.addEventListener('click', () => {
+								alert(operatingSystem);
+							});
+							joinButton.addEventListener('touchend', () => {
+								alert(operatingSystem);
+							});
+						</script>
 					</div>
 				</div>
 			</div>
 
-			<!-- About Us -->
-			<div class="w-full lg:w-[50%] min-h-screen bg-offblack" id="about-us">
-				<div class="w-full min-h-screen bg-offblack">
-					<div class="flex flex-col justify-center items-center min-h-screen bg-purple">
-						<div class="w-full h-auto flex flex-col items-center justify-center text-center py-10">
-							<h1 class="text-5xl mb-5">Our Mission</h1>
-							<div class="relative flex items-center justify-center">
-								<img class="max-w-[70%] z-0" src="./assets/device_trans.png" alt="" />								
-							</div>
-							<!-- Join Button -->
-							<div class="flex flex-col justify-center items-center text-center my-10">
-								<a class="py-3 px-10 rounded-xl my-4 text-xl hover:text-yellow bg-yellow hover:bg-offblack hover:border hover:border-yellow transition-colors duration-300 hover:cursor-pointer"
-									id="join-button">
-									Join the Beta
-								</a>
-							</div>
-							<!-- <div class="flex flex-col justify-center items-center">
-								<a href="#about-us" class="text-[75px] text-center">
-									<h3 class="text-xl">
-										Meet the Team
-									</h3>
-									<ion-icon name="chevron-down-outline"></ion-icon>
-								</a>
-							</div> -->
-						</div>
+			<!-- Our Mission -->
+			<div
+				class="w-full lg:w-[50%] min-h-screen bg-offblack"
+				id="about-us"
+			>
+				<div
+					class="flex flex-col justify-center items-center h-screen bg-purple py-[80px]"
+				>
+					<h1 class="text-5xl font-[550]">Our Mission</h1>
+					<div
+						class="relative flex items-center h-full justify-center"
+					>
+						<img
+							class="h-full"
+							src="./assets/device_trans.png"
+							alt=""
+						/>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- Meet the Team -->
-		<div class="flex flex-col justify-center items-center bg-offblack py-6" id="team">
-			<h1 class="text-5xl py-6">Meet the Team</h1>
-			<div class="flex flex-wrap justify-center gap-x-36 gap-y-8 py-4">
-				<div class="flex flex-col text-center">
-					<a href="https://www.linkedin.com/in/aidan-hubley-24228322b/" target="_blank">
-						<img class="self-center w-[150px] h-[150px] rounded-full" src="./assets/devs/aidan.jpg" alt="" />
+		<div
+			class="flex flex-col w-full bg-offblack justify-center items-center py-6"
+			id="team"
+		>
+			<h1 class="text-5xl font-[500] py-6">Meet the Team</h1>
+			<div
+				class="flex flex-wrap justify-center md:justify-around w-full px-[60px]"
+			>
+				<div class="flex flex-col text-center mx-10 my-6">
+					<a
+						href="https://www.linkedin.com/in/aidan-hubley-24228322b/"
+						target="_blank"
+					>
+						<img
+							class="self-center w-[175px] h-[175px] rounded-full"
+							src="./assets/devs/aidan.jpg"
+							alt=""
+						/>
 						<h3 class="text-2xl">Aidan Hubley</h3>
 						<h5>Team Lead</h5>
 					</a>
 				</div>
-				<div class="flex flex-col text-center">
-					<a href="https://www.linkedin.com/in/amuresan5833/" target="_blank">
-						<img class="self-center w-[150px] h-[150px] rounded-full" src="./assets/devs/alex.jpg" alt="" />
-						<h3 class="text-2xl">Alex Muresam</h3>
+				<div class="flex flex-col text-center mx-10 my-6">
+					<a
+						href="https://www.linkedin.com/in/amuresan5833/"
+						target="_blank"
+					>
+						<img
+							class="self-center w-[175px] h-[175px] rounded-full"
+							src="./assets/devs/alex.jpg"
+							alt=""
+						/>
+						<h3 class="text-2xl">Alex Muresan</h3>
 						<h5>Lead Developer</h5>
 					</a>
 				</div>
-				<div class="flex flex-col text-center">
-					<a href="https://www.linkedin.com/in/nason-allen/" target="_blank">
-						<img class="self-center w-[150px] h-[150px] rounded-full" src="./assets/devs/nason.jpg" alt="" />
+				<div class="flex flex-col text-center mx-10 my-6">
+					<a
+						href="https://www.linkedin.com/in/nason-allen/"
+						target="_blank"
+					>
+						<img
+							class="self-center w-[175px] h-[175px] rounded-full"
+							src="./assets/devs/nason.jpg"
+							alt=""
+						/>
 						<h3 class="text-2xl">Nason Allen</h3>
 						<h5>Developer</h5>
 					</a>
 				</div>
-				<div class="flex flex-col text-center">
-					<a HREF="https://www.linkedin.com/in/andrew-roberti-4724a8263/" target="_blank">
-						<img class="self-center w-[150px] h-[150px] rounded-full" src="./assets/devs/andrew.jpg" alt="" />
+				<div class="flex flex-col text-center mx-10 my-6">
+					<a
+						href="https://www.linkedin.com/in/andrew-roberti-4724a8263/"
+						target="_blank"
+					>
+						<img
+							class="self-center w-[175px] h-[175px] rounded-full"
+							src="./assets/devs/andrew.jpg"
+							alt=""
+						/>
 						<h3 class="text-2xl">Andrew Roberti</h3>
 						<h5>Developer</h5>
 					</a>
 				</div>
-				<div class="flex flex-col text-center">
-					<A HREF="https://www.linkedin.com/in/justin-ayres-25576921b/" target="_blank">
-						<img class="self-center w-[150px] h-[150px] rounded-full" src="./assets/devs/justin.jpg" alt="" />
+				<div class="flex flex-col text-center mx-10 my-6">
+					<a
+						href="https://www.linkedin.com/in/justin-ayres-25576921b/"
+						target="_blank"
+					>
+						<img
+							class="self-center w-[175px] h-[175px] rounded-full"
+							src="./assets/devs/justin.jpg"
+							alt=""
+						/>
 						<h3 class="text-2xl">Justin Ayres</h3>
 						<h5>Developer</h5>
 					</a>
 				</div>
 			</div>
 		</div>
+
 		<!-- <div class="flex flex-col justify-center items-center min-h-screen bg-green">
 			<h1 class="text-5xl pt-10">Meet the Team</h1>
 			<div class="flex flex-col lg:flex-row justify-center items-center py-4 gap-x-6">
